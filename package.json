@@ -1,0 +1,13 @@
+{
+  "name": "amazon-ui-test-automation",
+  "version": "1.0.0",
+  "description": "Test Automation Project for amazon.com",
+  "author": "Muhammad Faisal <mmdfaisal@gmail.com>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.9",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {}
+}
