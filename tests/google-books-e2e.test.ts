@@ -13,7 +13,7 @@ test.describe("Google Books E2E Tests", () => {
     await booksHomePage.searchItem(Book.name);
   });
 
-  test("Validate searched item is listed in search results", async ({
+  test("Validate searched book is listed in search results", async ({
     page,
   }) => {
     const booksHomePage = new BooksHomePage(page);
@@ -21,12 +21,10 @@ test.describe("Google Books E2E Tests", () => {
     //For example I did not write method booksHomePage.IsSearchItemVisible(item), returning boolean
     //Retrieving the item itself from the page class and doing validation at the test layer makes things more flexible
     //You can then perform ANY kind of validation on it, perform any action like click etc.
-    await expect(
-      booksHomePage.getFirstResultItem("East of Eden")
-    ).toBeVisible();
+    await expect(booksHomePage.getFirstResultItem(Book.name)).toBeVisible();
   });
 
-  test("Validate searched item can be added to library", async ({
+  test("Validate searched book can be added to library", async ({
     page,
     context,
   }) => {
