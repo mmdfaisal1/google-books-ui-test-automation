@@ -37,14 +37,13 @@ test.describe("Google Books E2E Tests", () => {
     await expect(bookDetailsPage.getBookHeading(Book.name)).toBeVisible();
 
     //Switching browser context, as the Google login opens in a new window
-    //Note [newPage] is destructuring, as await Promise.all() returns [Page, void]
     const [newPage] = await Promise.all([
       context.waitForEvent("page"),
       bookDetailsPage.addBookToMyLibrary(),
     ]);
     //await newPage.waitForLoadState();
 
-    //Note that newPage is being passed as argument here
+    //Note that newPage (not page) is being passed as argument here
     const loginPage = new LoginPage(newPage);
     //Note that the url (e.g. accounts.google.com) is not used as validation condition
     //Because you can have the correct url but still get a 404

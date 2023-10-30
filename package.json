@@ -1,13 +1,19 @@
 {
-  "name": "amazon-ui-test-automation",
+  "name": "goggle-books-ui-test-automation",
   "version": "1.0.0",
-  "description": "Test Automation Project for amazon.com",
+  "description": "Test Automation Project for Google Books",
   "author": "Muhammad Faisal <mmdfaisal@gmail.com>",
   "license": "UNLICENSED",
+  "engines": {
+    "yarn": "1.x",
+    "npm": "Please use yarn"
+  },
+  "scripts": {
+    "test": "npx playwright test"
+  },
   "devDependencies": {
     "@playwright/test": "1.39.0",
     "@types/node": "20.8.9",
     "typescript": "5.2.2"
-  },
-  "scripts": {}
+  }
 }
