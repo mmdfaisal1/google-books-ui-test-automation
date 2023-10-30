@@ -41,7 +41,6 @@ test.describe("Google Books E2E Tests", () => {
       context.waitForEvent("page"),
       bookDetailsPage.addBookToMyLibrary(),
     ]);
-    //await newPage.waitForLoadState();
 
     //Note that newPage (not page) is being passed as argument here
     const loginPage = new LoginPage(newPage);

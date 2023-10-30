@@ -14,10 +14,6 @@ export class BooksHomePage extends _BasePage {
   public async searchItem(itemName: string) {
     await this.searchFiled.fill(itemName);
     await this.page.keyboard.press("Enter");
-    //The above will trigger a page navigation, hence we wait for navigation to complete.
-    //Previously the recommended method was page.waitForNavigation(), but it is now depreceated.
-    //https://playwright.dev/docs/api/class-page#page-wait-for-navigation
-    //await this.page.waitForURL(/^.*search.*$/);
   }
 
   public getFirstResultItem(itemName: string) {
