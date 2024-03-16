@@ -34,6 +34,8 @@ test.describe("Google Books E2E Tests", () => {
     //The following validates the condition from requirement (2) - "ensure you've made it to the correct book"
     await expect(bookDetailsPage.getBookHeading(Book.name)).toBeVisible();
 
+    await bookDetailsPage.closePreviewDialog();
+
     //Switching browser context, as the Google login opens in a new window
     const [newPage] = await Promise.all([
       context.waitForEvent("page"),
